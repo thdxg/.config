@@ -80,10 +80,6 @@ name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
 
 [[language]]
-name = "nu"
-formatter = { command = "nufmt", args = ["--stdin"] }
-
-[[language]]
 name = "typst"
 formatter = { command = "typstyle" }
 

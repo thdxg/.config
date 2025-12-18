@@ -3,6 +3,7 @@ alias ll = ls -l
 alias pip = pip3
 alias python = python3
 alias tailscale = /Applications/Tailscale.app/Contents/MacOS/Tailscale
+alias zj = zellij
 
 def conf-apps [] { ls --short-names  $env.XDG_CONFIG_HOME | get name }
 # Open config files for various applications

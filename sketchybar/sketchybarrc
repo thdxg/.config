@@ -1,0 +1,35 @@
+#!/usr/bin/env nu
+
+{
+    sketchy: {
+        font: "Iosevka"
+        color: {
+            transparent: "0x00000000"
+            primary_bg: "0xee191724"
+            primary_fg: "0xffe0def4"
+            secondary_fg: "0xff908caa"
+        }
+    }
+} | load-env
+
+let bar = [
+    position=top
+    topmost=off
+    height=32
+    sticky=on
+    color=($env.sketchy.color.transparent)
+    margin=8
+    padding_left=0
+    padding_right=0
+    y_offset=8
+    font_smoothing=on
+];
+
+(
+    sketchybar
+        --bar ...$bar
+)
+
+
+source ~/.config/sketchybar/items.nu
+

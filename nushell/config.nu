@@ -29,6 +29,7 @@ path add $env.GOBIN
 path add ([ $env.HOME .cargo bin ] | path join)
 path add ([ $env.HOME google-cloud-sdk bin] | path join)
 path add ([ $env.HOME .local bin ] | path join)
+path add ([ $env.HOME .bun bin ] | path join)
 
 # --- load vendors ---
 # schema:
@@ -99,9 +100,10 @@ def --wrapped kubectl [...rest] {
 def zellij-update-tabname [] {
     if ("ZELLIJ" in $env) {
         mut tabname = "";
-        let dir: string = match (pwd) {
+        mut dir: string = pwd;
+        $dir = match ($dir) {
             ($env.HOME) => { "~" },
-            _ => { pwd | path basename },
+            _ => { $dir | path basename },
         };
         $tabname = $"[($dir)]";
 

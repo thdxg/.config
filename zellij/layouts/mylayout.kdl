@@ -4,7 +4,7 @@ layout {
             plugin location="file:/Users/ethantlee/.config/zellij/plugins/zjstatus.wasm" {
                 format_left   "#[bg=#26233a,fg=#e0def4,bold] {session} #[] {tabs}"
                 format_center ""
-                format_right  "{pipe_zjstatus_hints} #[bg=#21202e,fg=#e0def4,bold]{mode}"
+                format_right  "#[fg=#e0def4]{pipe_zjstatus_hints}"
                 format_space  ""
 
                 pipe_zjstatus_hints_format "{output}"
