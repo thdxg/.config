@@ -1,6 +1,8 @@
 config-version = 2
 
-after-startup-command = ["exec-and-forget borders"]
+after-startup-command = [
+  # "exec-and-forget borders"
+]
 
 exec-on-workspace-change = []
 
@@ -36,7 +38,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
-persistent-workspaces = ["1", "2", "3", "4", "5", "F"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "F", "N"]
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -125,6 +127,7 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-f = 'workspace F'
+alt-n = 'workspace N'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -137,6 +140,7 @@ alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-f = 'move-node-to-workspace F'
+alt-shift-n = 'move-node-to-workspace N'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -163,14 +167,14 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-down = 'volume down'
-up = 'volume up'
-shift-down = ['volume set 0', 'mode main']
+# down = 'volume down'
+# up = 'volume up'
+# shift-down = ['volume set 0', 'mode main']
 
 # message
-[[on-window-detected]]
-if.app-id = "com.apple.MobileSMS"
-run = ["layout floating"]
+# [[on-window-detected]]
+# if.app-id = "com.apple.MobileSMS"
+# run = ["layout floating"]
 
 [[on-window-detected]]
 if.app-id = "company.thebrowser.Browser"
@@ -187,3 +191,7 @@ run = ["move-node-to-workspace 3"]
 [[on-window-detected]]
 if.app-id = "com.apple.finder"
 run = ["move-node-to-workspace F"]
+
+[[on-window-detected]]
+if.app-id = "com.apple.iCal"
+run = ["move-node-to-workspace 4"]

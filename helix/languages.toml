@@ -5,11 +5,7 @@ formatter = { command = "goimports" }
 
 [[language]]
 name = "typescript"
-formatter = { command = 'biome', args = [
-  "format",
-  "--stdin-file-path",
-  "buffer.ts",
-] }
+formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
   "typescript-language-server",
   "vscode-eslint-language-server",
@@ -17,11 +13,7 @@ language-servers = [
 
 [[language]]
 name = "tsx"
-formatter = { command = 'biome', args = [
-  "format",
-  "--stdin-file-path",
-  "buffer.tsx",
-] }
+formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
   "typescript-language-server",
   "tailwindcss-ls",
@@ -31,11 +23,7 @@ language-servers = [
 
 [[language]]
 name = "javascript"
-formatter = { command = 'biome', args = [
-  "format",
-  "--stdin-file-path",
-  "buffer.js",
-] }
+formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
   "typescript-language-server",
   "vscode-eslint-language-server",
@@ -43,11 +31,7 @@ language-servers = [
 
 [[language]]
 name = "jsx"
-formatter = { command = 'biome', args = [
-  "format",
-  "--stdin-file-path",
-  "buffer.jsx",
-] }
+formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
   "typescript-language-server",
   "tailwindcss-ls",
@@ -85,6 +69,11 @@ formatter = { command = "typstyle" }
 
 [[language]]
 name = "yaml"
+file-types = ["yml", "yaml"]
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+[[language]]
+name = "helm"
 file-types = ["yml", "yaml"]
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
 

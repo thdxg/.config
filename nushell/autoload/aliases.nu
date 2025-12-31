@@ -126,6 +126,10 @@ def --env --wrapped cd [...rest: string@z-completion] {
     __zoxide_z ...$rest
 }
 
+def --wrapped peaclock [...rest: string] {
+   ^peaclock --config-dir ~/.config/peaclock 
+}
+
 def tmux-sessions [] { tmux ls -F '#{session_name}' | split row "\n" }
 def --env t [session?: string@tmux-sessions] {
     mut session = $session

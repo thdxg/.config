@@ -88,13 +88,9 @@ $apps | each { |app|
 
 # --- kubectl ----
 # load this before vendor kubectl aliases
-def --wrapped kubectl [...rest] {
-    let cmd = ($rest | get 0);
-    match $cmd {
-        "get" => (^kubectl ...$rest | detect columns),
-        _ => (^kubectl ...$rest),
-    }
-}
+# def --wrapped "kubectl get" [...rest] {
+#     ^kubectl get -o json ...$rest | from json | get items | flatten
+# }
 
 # --- zellij ---
 def zellij-update-tabname [] {

@@ -342,7 +342,7 @@ simplified_ui true
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "default"
+theme "rose-pine"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -366,12 +366,12 @@ default_layout "mylayout"
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 // 
-// layout_dir "~/.config/zellij/layouts"
+layout_dir "/Users/ethantlee/.config/zellij/layouts"
  
 // The folder in which Zellij will look for themes
 // (Requires restart)
 // 
-// theme_dir "/tmp"
+theme_dir "/Users/ethantlee/.config/zellij/themes"
  
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
