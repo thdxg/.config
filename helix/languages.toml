@@ -6,10 +6,7 @@ formatter = { command = "goimports" }
 [[language]]
 name = "typescript"
 formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
-language-servers = [
-  "typescript-language-server",
-  "vscode-eslint-language-server",
-]
+language-servers = ["typescript-language-server", "eslint"]
 
 [[language]]
 name = "tsx"
@@ -17,17 +14,14 @@ formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
   "typescript-language-server",
   "tailwindcss-ls",
-  "vscode-eslint-language-server",
+  "eslint",
   "emmet-ls",
 ]
 
 [[language]]
 name = "javascript"
 formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
-language-servers = [
-  "typescript-language-server",
-  "vscode-eslint-language-server",
-]
+language-servers = ["typescript-language-server", "eslint"]
 
 [[language]]
 name = "jsx"
@@ -35,7 +29,7 @@ formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
   "typescript-language-server",
   "tailwindcss-ls",
-  "vscode-eslint-language-server",
+  "eslint",
   "emmet-ls",
 ]
 
@@ -151,6 +145,10 @@ validation = true
 [language-server.emmet-ls]
 command = "emmet-ls"
 args = ["--stdio"]
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
 
 [language-server.mdpls]
 command = "mdpls"

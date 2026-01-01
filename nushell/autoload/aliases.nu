@@ -33,64 +33,13 @@ def note [] {
 
 # Explore files with yazi
 def --env f [...args] {
-	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
-	yazi ...$args --cwd-file $tmp
-	let cwd = (open $tmp)
-	if $cwd != "" and $cwd != $env.PWD {
-		cd $cwd
-	}
-	rm -fp $tmp
-}
-
-# Fuzzy history search
-def fh [] {
-    history | get command | to text | sk --ansi
-}
-
-def secret-cmds [] { ["env", "paths", "add", "get"] }
-def secret-paths [] { vault kv list -mount="personal" -format=json | from json }
-# Manage secrets with Vault
-def --env secret [cmd?:string@secret-cmds, path?: string@secret-paths, data?: record] {
-    let mount = "personal"
-    let paths = (vault kv list -mount=($mount) -format=json | from json)
-
-    mut secrets = {}
-    for path in $paths {
-        $secrets = $secrets | merge {
-            $path: (vault kv get -mount=($mount) -format="json" $path | from json | get data.data)
-        }
+    let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+    yazi ...$args --cwd-file $tmp
+    let cwd = (open $tmp)
+    if $cwd != "" and $cwd != $env.PWD {
+    		cd $cwd
     }
-
-    if $cmd == null {
-        return $secrets
-    }
-
-    let secret_file = ([ $nu.user-autoload-dirs.0 secret.nu ] | path join)
-    match $cmd {
-        "env" => { $secrets | get env | to nuon | into string | $"($in) | load-env" | save $secret_file -f },
-        "paths" => { $paths },
-        "get" => {
-            if $path == null {
-                error make --unspanned { msg: "path is required" }
-            }
-            $secrets | get $path
-        },
-        "add" => {
-            if $path == null {
-                error make --unspanned { msg: "path is required" }
-            }
-            if $data == null {
-                error make --unspanned { msg: "data is required" }
-            }
-            $data
-            | transpose key val
-            | each { |pair|
-                $pair.key + "=" + $pair.val
-            }
-            | vault kv patch -mount="personal" -format="json" $path ...$in | from json | get data
-        }
-        _ => { error make --unspanned  { msg: $"Unknown subcommand. Supported subcommands: (secret-cmds)" } }
-    }
+    rm -fp $tmp
 }
 
 def z-completion [context: string] {
@@ -126,35 +75,20 @@ def --env --wrapped cd [...rest: string@z-completion] {
     __zoxide_z ...$rest
 }
 
-def --wrapped peaclock [...rest: string] {
-   ^peaclock --config-dir ~/.config/peaclock 
-}
-
-def tmux-sessions [] { tmux ls -F '#{session_name}' | split row "\n" }
-def --env t [session?: string@tmux-sessions] {
-    mut session = $session
-    if $session == null {
-        $session = tmux-sessions | input list
-    }
-    if not (tmux-sessions | $session in $in) {
-        error make --unspanned {msg: $"session '($session)' not found"}
+def --env secret [path?: string] {
+    mut paths = $env.INFISICAL_PATHS?
+    if $paths == null {
+        $paths = (
+            infisical secrets folders get --projectId=($env.INFISICAL_PROJECT_ID) -o json
+            | from json
+            | get folderName
+        )
+        $env.INFISICAL_PATHS = $paths
     }
 
-    tmux a -t $session    
+    let path = "/" + ($path | default ($env.INFISICAL_PATHS | input list))
+
+    infisical secrets --recursive --path=($path) --projectId=($env.INFISICAL_PROJECT_ID) -o json
+    | from json 
+    | rename key value
 }
-
-def tmake [name: string] {
-    let session_exists = (tmux has-session -t $name | complete).exit_code != 0
-
-    if $session_exists {
-        tmux new-session -s $name -d
-        tmux send-keys -t $"($name):1.1" "hx ." C-m
-        tmux new-window -t $name
-        tmux select-window -t $"($name):1.1"
-
-        print $"session '($name)' created"
-    } else {
-        error make --unspanned { msg: $"session '($name)' already exists" }
-    }
-}
-

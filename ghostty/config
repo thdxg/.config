@@ -14,8 +14,8 @@ window-save-state = always
 
 # theme
 theme = Rose Pine
-background-opacity = 0
-background-opacity-cells = false
+background-opacity = 0.5
+background-opacity-cells = true
 background-blur = macos-glass-regular
 split-divider-color = #403d52
 unfocused-split-opacity = 0.5
