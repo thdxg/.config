@@ -11,12 +11,11 @@ window-padding-y = 10
 window-padding-balance = true
 window-colorspace = display-p3
 window-save-state = always
-window-colorspace = display-p3
 
 # theme
 theme = Rose Pine
-background-opacity = 0.8
-background-opacity-cells = true
+background-opacity = 0
+background-opacity-cells = false
 background-blur = macos-glass-regular
 split-divider-color = #403d52
 unfocused-split-opacity = 0.5
@@ -34,7 +33,7 @@ quick-terminal-size = 50%,50%
 clipboard-paste-protection = false
 
 # shader
-# custom-shader = "./shaders/galaxy.glsl"
+# custom-shader = "./shaders/bloom.glsl"
 
 # shell integration
 shell-integration-features = ssh-terminfo,ssh-env,sudo
