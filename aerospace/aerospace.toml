@@ -38,7 +38,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
-persistent-workspaces = ["1", "2", "3", "4", "5", "F", "N"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "F", "C"]
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -127,7 +127,7 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-f = 'workspace F'
-alt-n = 'workspace N'
+alt-c = 'workspace C'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -177,7 +177,7 @@ alt-shift-l = ['join-with right', 'mode main']
 # run = ["layout floating"]
 
 [[on-window-detected]]
-if.app-id = "company.thebrowser.Browser"
+if.app-id = "company.thebrowserdia"
 run = ["move-node-to-workspace 1"]
 
 [[on-window-detected]]

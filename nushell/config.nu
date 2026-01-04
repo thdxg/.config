@@ -1,5 +1,4 @@
 use std/log
-source completions.nu
 
 # --- disable last login message ---
 touch ~/.hushlogin
@@ -48,3 +47,10 @@ $env.config.hooks = {
         ]
     }
 }
+
+# carapace
+const carapace_path = ([ $nu.default-config-dir vendor autoload carapace.nu ] | path join)
+if not ($carapace_path | path exists) {
+    carapace _carapace nushell | save --force $carapace_path
+}
+source $carapace_path
