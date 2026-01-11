@@ -86,9 +86,9 @@ def --env secret [path?: string] {
         $env.INFISICAL_PATHS = $paths
     }
 
-    let path = "/" + ($path | default ($env.INFISICAL_PATHS | input list))
+    let path = "/" + ($env.INFISICAL_PATHS | input list)
 
     infisical secrets --recursive --path=($path) --projectId=($env.INFISICAL_PROJECT_ID) -o json
-    | from json 
+    | from json
     | rename key value
 }

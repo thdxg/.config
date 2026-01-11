@@ -6,14 +6,19 @@ formatter = { command = "goimports" }
 [[language]]
 name = "typescript"
 formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
-language-servers = ["typescript-language-server", "eslint"]
+language-servers = [
+  # "tsgo",
+  "typescript-language-server",
+  "eslint",
+]
 
 [[language]]
 name = "tsx"
 formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
-  "typescript-language-server",
+  # "tsgo",
   "tailwindcss-ls",
+  "typescript-language-server",
   "eslint",
   "emmet-ls",
 ]
@@ -21,14 +26,19 @@ language-servers = [
 [[language]]
 name = "javascript"
 formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
-language-servers = ["typescript-language-server", "eslint"]
+language-servers = [
+  # "tsgo",
+  "typescript-language-server",
+  "eslint",
+]
 
 [[language]]
 name = "jsx"
 formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
-  "typescript-language-server",
+  # "tsgo",
   "tailwindcss-ls",
+  "typescript-language-server",
   "eslint",
   "emmet-ls",
 ]
@@ -118,6 +128,12 @@ formatter = { command = "sqlformat", args = [
   "-",
 ] }
 
+[[language]]
+name = "helm"
+scope = "source.helm"
+file-types = ["templates/*.yaml"]
+roots = ["Chart.yaml"]
+
 [language-server.gopls.config]
 gofumpt = true
 
@@ -141,6 +157,10 @@ validation = true
 [language-server.yaml-language-server.config.yaml.schemas]
 "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
 "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+
+[language-server.tsgo]
+command = "tsgo"
+args = ["--lsp", "--stdio"]
 
 [language-server.emmet-ls]
 command = "emmet-ls"

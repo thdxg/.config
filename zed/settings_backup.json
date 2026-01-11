@@ -1,15 +1,9 @@
 {
-  "formatter": [
-    {
-      "code_action": "source.organizeImports"
-    },
-    {
-      "code_action": "source.fixAll.eslint"
-    },
-    {
-      "code_action": "source.removeUnusedImports"
-    }
-  ],
+  "code_actions_on_format": {
+    "source.removeUnusedImports": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
   "context_servers": {
     "mcp-server-github": {
       "source": "extension",
@@ -133,8 +127,8 @@
   // AI
   "agent": {
     "single_file_review": true,
-    "default_profile": "write",
-    "always_allow_tool_actions": false,
+    "default_profile": "ask",
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-pro"
@@ -161,7 +155,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Bunker"
+    "dark": "Rosé Pine"
   },
   "inline_code_actions": false,
   "autosave": {

@@ -1,4 +1,7 @@
 {
+  "buffer_font_family": "Iosevka Nerd Font",
+  "soft_wrap": "prefer_line",
+  "show_wrap_guides": true,
   "code_actions_on_format": {
     "source.removeUnusedImports": true,
     "source.fixAll.eslint": true,
@@ -6,7 +9,6 @@
   },
   "context_servers": {
     "mcp-server-github": {
-      "source": "extension",
       "enabled": true,
       "settings": {}
     }
@@ -112,7 +114,7 @@
     "dock": "right"
   },
   "collaboration_panel": {
-    "button": false
+    "button": true
   },
   "terminal": {
     "button": true,
@@ -155,7 +157,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Bunker"
+    "dark": "Rosé Pine"
   },
   "inline_code_actions": false,
   "autosave": {
