@@ -1,5 +1,4 @@
 nushell/history.txt
-nushell/autoload/env.nu
 nushell/autoload/secret.nu
 argocd
 configstore
