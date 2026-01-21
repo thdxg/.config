@@ -1,4 +1,42 @@
 {
+  "calls": {
+    "mute_on_join": true
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_user_picture": true,
+    "show_sign_in": true,
+    "show_user_menu": true,
+    "show_onboarding_banner": true,
+    "show_project_items": true,
+    "show_branch_icon": false
+  },
+  "close_on_file_delete": true,
+  "file_finder": {
+    "modal_max_width": "medium",
+    "file_icons": true,
+    "include_ignored": "all"
+  },
+  "seed_search_query_from_cursor": "selection",
+  "search": {
+    "button": false,
+    "regex": true,
+    "include_ignored": true
+  },
+  "prettier": {
+    "allowed": true
+  },
+  "rounded_selection": true,
+  "cursor_shape": "bar",
+  "cursor_blink": false,
+  "ui_font_family": ".ZedSans",
+  "buffer_line_height": "comfortable",
+  "restore_on_startup": "launchpad",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "base_keymap": "SublimeText",
+  "helix_mode": true,
   "buffer_font_family": "Iosevka Nerd Font",
   "soft_wrap": "prefer_line",
   "show_wrap_guides": true,
@@ -33,7 +71,7 @@
   "extend_comment_on_newline": false,
 
   // theme
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "Zed (Default)",
 
   "gutter": {
     "min_line_number_digits": 3,
@@ -65,7 +103,7 @@
   // },
 
   "diagnostics": {
-    "button": true,
+    "button": false,
     "include_warnings": true,
     "lsp_pull_diagnostics": {
       "enabled": true,
@@ -150,13 +188,11 @@
   "features": {
     "edit_prediction_provider": "copilot"
   },
-
-  "helix_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
-    "mode": "system",
-    "light": "One Light",
+    "mode": "dark",
+    "light": "Rosé Pine Dawn",
     "dark": "Rosé Pine"
   },
   "inline_code_actions": false,

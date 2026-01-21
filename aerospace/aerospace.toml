@@ -182,7 +182,7 @@ run = ["move-node-to-workspace 1"]
 
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
-run = ["move-node-to-workspace 2"]
+run = ["move-node-to-workspace 2", "layout tiling"]
 
 [[on-window-detected]]
 if.app-name-regex-substring = "mail|discord|slack"

@@ -12,14 +12,18 @@ window-padding-y = 20
 window-padding-balance = true
 window-colorspace = display-p3
 window-save-state = always
+macos-titlebar-style = hidden
 
 # theme
 theme = Rose Pine
-background-opacity = 0.5
-background-opacity-cells = false
+# background-image = "~/.config/ghostty/background.png"
+# background-image-opacity = 0.5
+# background-image-fit = cover
+background-opacity = 0.7
+background-opacity-cells = true
 background-blur = macos-glass-regular
 split-divider-color = #403d52
-unfocused-split-opacity = 0.5
+unfocused-split-opacity = 0.7
 
 # scrollback
 scrollback-limit = 4294967296
@@ -37,3 +41,4 @@ clipboard-paste-protection = false
 
 # shell integration
 shell-integration-features = ssh-terminfo,ssh-env,sudo
+

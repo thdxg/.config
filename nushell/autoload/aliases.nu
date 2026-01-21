@@ -92,3 +92,18 @@ def --env secret [path?: string] {
     | from json
     | rename key value
 }
+
+def gc [] {
+    try {
+        git add .;
+        lumen draft
+        | git commit -m $in
+    }
+}
+
+def jc [] {
+    try {
+        lumen draft
+        | jj commit -m $in
+    }
+}

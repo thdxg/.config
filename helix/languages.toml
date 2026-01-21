@@ -82,6 +82,19 @@ file-types = ["yml", "yaml"]
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
 
 [[language]]
+name = "c"
+file-types = ["c", "h"]
+formatter = { command = 'clang-format' }
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "cpp"
+file-types = ["cpp", "cc", "cxx", "hpp", "hcc", "hxx"]
+formatter = { command = 'clang-format' }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
 name = "github-actions"
 scope = ".github"
 file-types = [

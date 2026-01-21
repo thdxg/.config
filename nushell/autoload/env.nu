@@ -31,3 +31,9 @@ $env.INFISICAL_PROJECT_ID = "4ff40a1f-cb8c-475a-bae5-2f6d7f0dd7f9" # ethan proje
 
 # carapace
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
+
+# lumen
+$env.LUMEN_AI_PROVIDER = "gemini"
+$env.LUMEN_AI_MODEL = "gemini-2.5-flash-lite"
+
+$env.HELIX_RUNTIME = "~/dev/helix/runtime"

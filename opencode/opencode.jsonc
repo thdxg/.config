@@ -27,4 +27,10 @@
       "url": "https://mcp.grep.app",
     },
   },
+  "server": {
+    "port": 10000,
+    "hostname": "127.0.0.1",
+    "mdns": false,
+    "cors": [],
+  },
 }

@@ -13,6 +13,7 @@ path add ([ $env.HOME .cargo bin ] | path join)
 path add ([ $env.HOME google-cloud-sdk bin] | path join)
 path add ([ $env.HOME .local bin ] | path join)
 path add ([ $env.HOME .bun bin ] | path join)
+path add ([ (brew --prefix) opt llvm bin ] | path join)
 
 # --- zellij ---
 def zellij-update-tabname [] {
