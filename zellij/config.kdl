@@ -16,6 +16,7 @@ keybinds clear-defaults=true {
         bind "t" { SwitchToMode "tab"; }
         bind "s" { SwitchToMode "session"; }
         bind "r" { SwitchToMode "resize"; }
+        bind "e" { SwitchToMode "scroll"; }
 
         bind "1" { GoToTab 1; SwitchToMode "normal"; }
         bind "2" { GoToTab 2; SwitchToMode "normal"; }
@@ -105,10 +106,10 @@ keybinds clear-defaults=true {
         bind "p" { MovePaneBackwards; }
         bind "tab" { MovePane; }
     }
-    // scroll {
-    //     bind "e" { EditScrollback; SwitchToMode "normal"; }
-    //     bind "s" { SwitchToMode "entersearch"; SearchInput 0; }
-    // }
+    scroll {
+        bind "e" { EditScrollback; SwitchToMode "normal"; }
+        bind "s" { SwitchToMode "entersearch"; SearchInput 0; }
+    }
     search {
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "n" { Search "down"; }
@@ -337,7 +338,7 @@ web_client {
 //   - true
 //   - false (Default)
 // 
-simplified_ui true
+simplified_ui false
  
 // Choose the theme that is specified in the themes section.
 // Default: default

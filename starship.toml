@@ -7,6 +7,7 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
+$mise\
 $cmd_duration\
 $line_break\
 $character
@@ -56,3 +57,11 @@ style = "subtle"
 [cmd_duration]
 format = "[$duration]($style) "
 style = "rose"
+
+[mise]
+format = "[$symbol $health]($style) "
+disabled = false
+symbol = "mise"
+healthy_symbol = "✔︎"
+unhealthy_symbol = "❌"
+style = "subtle"

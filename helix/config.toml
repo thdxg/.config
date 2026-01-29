@@ -51,6 +51,19 @@ snippets = true
   "paste_before",
 ]
 
+[keys.select.space]
+e = [
+  ':sh rm -f /tmp/unique-file',
+  ':set mouse false',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+  ':set mouse true',
+]
+# Show word count
+A-w = "@<A-|>tee /tmp/helix-wc.file<ret>:sh cat /tmp/helix-wc.file | wc -w<ret>"
+
 [keys.normal.space]
 e = [
   ':sh rm -f /tmp/unique-file',
