@@ -9,38 +9,109 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "workspace::ToggleRightDock",
-      "ctrl-\\": "project_panel::ToggleFocus"
-    }
+      "space e": "project_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "cmd-alt-r": "editor::Rename"
-    }
+      "cmd-alt-r": "editor::Rename",
+    },
   },
   {
     "context": "ProjectPanel",
     "bindings": {
-      "tab": "git_panel::ToggleFocus"
-    }
+      "tab": "git_panel::ToggleFocus",
+    },
   },
   {
     "context": "GitPanel",
     "bindings": {
-      "tab": "project_panel::ToggleFocus"
+      "tab": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-\\": null,
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-f": "editor::Format",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-j": null,
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "bindings": {
+      "ctrl-j": null,
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "bindings": {
+      "ctrl-k": null,
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-k": null,
+    },
+  },
+  {
+    "context": "vim_mode == replace",
+    "bindings": {
+      "ctrl-k": null,
+    },
+  },
+  {
+    "context": "vim_mode == waiting",
+    "bindings": {
+      "ctrl-k": null,
+    },
+  },
+  {
+    "context": "showing_completions",
+    "bindings": {
+      "ctrl-k": "vim::LineUp",
+    },
+  },
+  {
+    "context": "showing_completions",
+    "bindings": {
+      "ctrl-j": "vim::LineDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "ctrl-j": "vim::LineDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "ctrl-k": "vim::LineUp",
+    },
+  },
+  {
+    "context": "(Editor && mode == full)",
+    "bindings": {
+      "cmd-r": null
     }
   },
   {
     "context": "Editor",
     "bindings": {
-      "cmd-\\": null
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-f": "editor::Format"
+      "cmd-r": "workspace::ToggleRightDock"
     }
   }
 ]
