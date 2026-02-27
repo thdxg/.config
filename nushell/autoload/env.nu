@@ -36,4 +36,5 @@ $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
 $env.LUMEN_AI_PROVIDER = "gemini"
 $env.LUMEN_AI_MODEL = "gemini-2.5-flash-lite"
 
-$env.HELIX_RUNTIME = "~/dev/helix/runtime"
+# helix
+$env.HELIX_RUNTIME = "~/.config/helix/runtime"

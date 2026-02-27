@@ -20,7 +20,7 @@ git-ignore = true
 ignore = true
 
 [editor.soft-wrap]
-enable = true
+enable = false
 wrap-at-text-width = true
 
 [editor.indent-guides]

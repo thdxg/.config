@@ -33,6 +33,7 @@ keybind = global:ctrl+`=toggle_quick_terminal
 quick-terminal-position = center
 quick-terminal-screen = mouse
 quick-terminal-animation-duration = 0
+quick-terminal-size = 75%,75%
 
 clipboard-paste-protection = false
 
@@ -40,5 +41,5 @@ clipboard-paste-protection = false
 # custom-shader = "./shaders/cursor-warp.glsl"
 
 # shell integration
-shell-integration-features = ssh-terminfo,ssh-env,sudo
+shell-integration-features = ssh-terminfo,sudo
 

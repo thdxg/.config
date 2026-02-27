@@ -4,6 +4,13 @@ roots = ["go.work", "go.mod"]
 formatter = { command = "goimports" }
 
 [[language]]
+name = "rust"
+scope = "source.rust"
+roots = ["Cargo.toml", "Cargo.lock"]
+formatter = { command = "leptosfmt", args = ["--stdin", "--rustfmt"] }
+language-servers = ["rust-analyzer", "tailwindcss-ls"]
+
+[[language]]
 name = "typescript"
 formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"] }
 language-servers = [
@@ -147,7 +154,7 @@ scope = "source.helm"
 file-types = ["templates/*.yaml"]
 roots = ["Chart.yaml"]
 
-[language-server.gopls.config]
+[language-server.gopls]
 gofumpt = true
 
 [language-server.nu]
@@ -191,12 +198,26 @@ config = { markdown.preview.auto = true }
 command = "sql-language-server"
 args = ["up", "--method", "stdio"]
 
-[language-server.rust-analyzer.config.check]
-command = "clippy"
-
-[language-server.rust-analyzer.config.cargo]
-features = "all"
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+cargo.features = "all"
+# procMacro = { enable = true, ignored = { leptos_macro = [
+#   "component",
+#   "server",
+# ] } }
+rustfmt.overrideCommand = ["leptosfmt", "--stdin", "--rustfmt"]
 
 [language-server.jdtls]
 command = "jdtls"
 args = ["-data", "~/.cache/jdtls/workspace"]
+
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[language-server.tailwindcss-ls.config]
+userLanguages = { rs = "html", "*.rs" = "html" }
+
+[language-server.tailwindcss-ls.config.tailwindCSS]
+experimental = { classRegex = [["class=\"(.*)\""]] }
+includeLanguages = { rust = "html", "*.rs" = "html" }

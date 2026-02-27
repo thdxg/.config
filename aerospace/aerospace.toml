@@ -7,7 +7,7 @@ after-startup-command = [
 exec-on-workspace-change = []
 
 # Start AeroSpace at login
-start-at-login = true
+start-at-login = false
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -126,8 +126,8 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
+alt-a = 'workspace A'
 alt-f = 'workspace F'
-alt-c = 'workspace C'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -139,8 +139,8 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-a = 'move-node-to-workspace A'
 alt-shift-f = 'move-node-to-workspace F'
-alt-shift-n = 'move-node-to-workspace N'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -195,3 +195,7 @@ run = ["move-node-to-workspace F"]
 [[on-window-detected]]
 if.app-id = "com.apple.iCal"
 run = ["move-node-to-workspace 4"]
+
+[[on-window-detected]]
+if.app-id = "com.kakao.KakaoTalkMac"
+run = ["layout floating"]

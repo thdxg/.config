@@ -1,9 +1,11 @@
-alias la = ls -la
+alias la = ls -a
 alias ll = ls -l
+alias lla = ls -la
 alias pip = pip3
 alias python = python3
 alias tailscale = /Applications/Tailscale.app/Contents/MacOS/Tailscale
 alias zj = zellij
+alias blender = /Applications/Blender.app/Contents/MacOS/Blender
 
 def conf-apps [] { ls --short-names  $env.XDG_CONFIG_HOME | get name }
 # Open config files for various applications

@@ -1,2 +1,5 @@
 [tools]
+"aqua:mvdan/gofumpt" = "latest"
+"go:github.com/nametake/golangci-lint-langserver" = "latest"
+golangci-lint = "v2.9.0"
 watchexec = "latest"
