@@ -4,7 +4,7 @@ theme = "rose-pine"
 mouse = true
 end-of-line-diagnostics = "hint"
 clipboard-provider = "pasteboard"
-text-width = 100
+text-width = 80
 
 [editor.statusline]
 left = ["mode", "file-absolute-path", "spinner"]
@@ -20,7 +20,7 @@ git-ignore = true
 ignore = true
 
 [editor.soft-wrap]
-enable = false
+enable = true
 wrap-at-text-width = true
 
 [editor.indent-guides]

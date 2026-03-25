@@ -8,7 +8,12 @@ name = "rust"
 scope = "source.rust"
 roots = ["Cargo.toml", "Cargo.lock"]
 formatter = { command = "leptosfmt", args = ["--stdin", "--rustfmt"] }
-language-servers = ["rust-analyzer", "tailwindcss-ls"]
+language-servers = [
+  "rust-analyzer",
+  "vscode-html-language-server",
+  "tailwindcss-ls",
+  "emmet-ls",
+]
 
 [[language]]
 name = "typescript"
@@ -77,6 +82,7 @@ formatter = { command = "taplo", args = ["format", "-"] }
 [[language]]
 name = "typst"
 formatter = { command = "typstyle" }
+language-servers = ["tinymist", "harper-ls"]
 
 [[language]]
 name = "yaml"
@@ -119,7 +125,14 @@ formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 [[language]]
 name = "markdown"
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-language-servers = ["marksman", "mdpls"]
+language-servers = ["marksman", "mdpls", "harper-ls", "mdx-language-server"]
+
+# [[language]]
+# name = "mdx"
+# scope = "source.mdx"
+# file-types = ["mdx"]
+# formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+# language-servers = ["mdx-language-server", "marksman", "mdpls", "harper-ls"]
 
 [[language]]
 name = "json"
@@ -153,6 +166,15 @@ name = "helm"
 scope = "source.helm"
 file-types = ["templates/*.yaml"]
 roots = ["Chart.yaml"]
+
+[[language]]
+name = "astro"
+scope = "source.astro"
+injection-regex = "astro"
+file-types = ["astro"]
+roots = ["package.json", "astro.config.mjs"]
+language-servers = ["astro-ls", "tailwindcss-ls", "emmet-ls"]
+
 
 [language-server.gopls]
 gofumpt = true
@@ -192,7 +214,7 @@ command = "vscode-eslint-language-server"
 
 [language-server.mdpls]
 command = "mdpls"
-config = { markdown.preview.auto = true }
+# config = { markdown.preview.auto = true }
 
 [language-server.sql-language-server]
 command = "sql-language-server"
@@ -221,3 +243,16 @@ userLanguages = { rs = "html", "*.rs" = "html" }
 [language-server.tailwindcss-ls.config.tailwindCSS]
 experimental = { classRegex = [["class=\"(.*)\""]] }
 includeLanguages = { rust = "html", "*.rs" = "html" }
+
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = { typescript = { tsdk = "/Users/user/.bun/install/global/node_modules/typescript/lib" }, environment = "node" }
+
+[language-server.mdx-language-server]
+command = "mdx-language-server"
+args = ["--stdio"]

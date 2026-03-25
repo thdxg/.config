@@ -1,5 +1,9 @@
 {
-    "global": { "show_in_menu_bar": false },
+    "global": {
+        "enable_cgeventtap_fallback": true,
+        "event_input_source_backend": "cgeventtap",
+        "show_in_menu_bar": false
+    },
     "profiles": [
         {
             "complex_modifications": {
@@ -71,42 +75,13 @@
             },
             "devices": [
                 {
+                    "disable_built_in_keyboard_if_exists": true,
                     "identifiers": {
                         "is_keyboard": true,
                         "product_id": 4136,
                         "vendor_id": 6645
                     },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "right_option" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 9760,
-                        "vendor_id": 6645
-                    },
                     "ignore_vendor_events": true
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 591,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "vendor_id": 2007
-                    },
-                    "ignore": false
                 }
             ],
             "name": "Default profile",

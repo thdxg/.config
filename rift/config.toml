@@ -90,9 +90,9 @@ new_window_placement = "master"
 # these settings only apply when layout mode == "scrolling"
 [settings.layout.scrolling]
 # width of the active column (0..1 of screen width)
-column_width_ratio = 0.95
+column_width_ratio = 1
 # min_column_width_ratio / max_column_width_ratio: clamp bounds used by resize commands
-min_column_width_ratio = 0.1
+min_column_width_ratio = 0
 max_column_width_ratio = 1
 # Alignment for the focused column: "left", "center", or "right"
 alignment = "center"
@@ -241,7 +241,6 @@ reapply_app_rules_on_title_change = false
 # - workspace: target workspace by index (integer) or name (string)
 # - layout: layout mode to use ("traditional", "bsp", "master_stack", "scrolling")
 # workspace_rules = [{ workspace = 0, layout = "scrolling" }]
-workspace_rules = [{ workspace = 0, layout = "scrolling" }]
 
 
 # Default workspace to activate on startup (0-based index).

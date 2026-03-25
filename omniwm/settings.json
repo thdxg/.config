@@ -1,0 +1,207 @@
+{
+  "appearanceMode" : "automatic",
+  "bordersEnabled" : false,
+  "borderWidth" : 1,
+  "dwindleSmartSplit" : true,
+  "hotkeyBindings" : [
+    {
+      "binding" : "Unassigned",
+      "id" : "workspaceBackAndForth"
+    },
+    {
+      "binding" : "Option+H",
+      "id" : "focus.left"
+    },
+    {
+      "binding" : "Option+J",
+      "id" : "focus.down"
+    },
+    {
+      "binding" : "Option+K",
+      "id" : "focus.up"
+    },
+    {
+      "binding" : "Option+L",
+      "id" : "focus.right"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusPrevious"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "moveWindowToWorkspaceUp"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "moveWindowToWorkspaceDown"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "moveColumnToWorkspaceUp"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "moveColumnToWorkspaceDown"
+    },
+    {
+      "binding" : "Option+Shift+H",
+      "id" : "move.left"
+    },
+    {
+      "binding" : "Option+Shift+J",
+      "id" : "move.down"
+    },
+    {
+      "binding" : "Option+Shift+K",
+      "id" : "move.up"
+    },
+    {
+      "binding" : "Option+Shift+L",
+      "id" : "move.right"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusMonitorNext"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusMonitorLast"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "moveColumn.left"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "moveColumn.right"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "toggleColumnTabbed"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumnFirst"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumnLast"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.0"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.1"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.2"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.3"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.4"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.5"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.6"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.7"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "focusColumn.8"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "openCommandPalette"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "raiseAllFloatingWindows"
+    },
+    {
+      "binding" : "Option+]",
+      "id" : "toggleHiddenBar"
+    },
+    {
+      "binding" : "Unassigned",
+      "id" : "toggleQuakeTerminal"
+    },
+    {
+      "binding" : "Option+Shift+\\",
+      "id" : "toggleWorkspaceLayout"
+    }
+  ],
+  "niriColumnWidthPresets" : [
+    0.33333333333333331,
+    0.5,
+    0.66000000000000003,
+    1
+  ],
+  "niriMaxWindowsPerColumn" : 1,
+  "quakeTerminalAnimationDuration" : 0,
+  "quakeTerminalAutoHide" : true,
+  "quakeTerminalEnabled" : false,
+  "version" : 4,
+  "workspaceBarBackgroundOpacity" : 0,
+  "workspaceBarEnabled" : false,
+  "workspaceBarHeight" : 20,
+  "workspaceBarNotchAware" : false,
+  "workspaceBarWindowLevel" : "floating",
+  "workspaceBarXOffset" : 290,
+  "workspaceConfigurations" : [
+    {
+      "id" : "AD36F001-C57E-41A5-AC1D-DF5249D007F0",
+      "layoutType" : "niri",
+      "monitorAssignment" : {
+        "type" : "main"
+      },
+      "name" : "1"
+    },
+    {
+      "id" : "454CECD4-5E9D-4ED1-95D7-979D48817F5F",
+      "layoutType" : "niri",
+      "monitorAssignment" : {
+        "type" : "main"
+      },
+      "name" : "2"
+    },
+    {
+      "id" : "BEB842B5-E894-4791-9FD1-397C3CDD3538",
+      "layoutType" : "niri",
+      "monitorAssignment" : {
+        "type" : "main"
+      },
+      "name" : "3"
+    },
+    {
+      "id" : "248AA883-2261-4D45-943C-79C0E46A232B",
+      "layoutType" : "niri",
+      "monitorAssignment" : {
+        "type" : "main"
+      },
+      "name" : "4"
+    },
+    {
+      "id" : "8B8C45D6-CE9E-41D9-BD50-BE4989D5E3DE",
+      "layoutType" : "niri",
+      "monitorAssignment" : {
+        "type" : "main"
+      },
+      "name" : "5"
+    }
+  ]
+}

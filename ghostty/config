@@ -1,7 +1,7 @@
 auto-update-channel = tip
 
 # font
-font-family = Iosevka
+font-family = Iosevka Nerd Font
 font-family = D2Coding
 font-size = 16
 window-title-font-family = Iosevka
@@ -16,10 +16,7 @@ macos-titlebar-style = hidden
 
 # theme
 theme = Rose Pine
-# background-image = "~/.config/ghostty/background.png"
-# background-image-opacity = 0.5
-# background-image-fit = cover
-background-opacity = 0.7
+background-opacity = 0.8
 background-opacity-cells = true
 background-blur = macos-glass-regular
 split-divider-color = #403d52
@@ -33,7 +30,7 @@ keybind = global:ctrl+`=toggle_quick_terminal
 quick-terminal-position = center
 quick-terminal-screen = mouse
 quick-terminal-animation-duration = 0
-quick-terminal-size = 75%,75%
+quick-terminal-size = 50%,50%
 
 clipboard-paste-protection = false
 
