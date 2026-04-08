@@ -42,7 +42,7 @@
   "session": {
     "trust_all_worktrees": true
   },
-  "base_keymap": "SublimeText",
+  "base_keymap": "VSCode",
   "helix_mode": true,
   "buffer_font_family": "Iosevka Nerd Font",
   "soft_wrap": "prefer_line",
@@ -58,7 +58,11 @@
       "settings": {}
     }
   },
-  "agent_servers": {},
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
   "ssh_connections": [
     {
       "host": "spitikos",
@@ -173,9 +177,11 @@
 
   // AI
   "agent": {
+    "tool_permissions": {
+      "default": "allow"
+    },
     "single_file_review": true,
     "default_profile": "ask",
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-pro"
@@ -184,6 +190,7 @@
     "dock": "left"
   },
   "edit_predictions": {
+    "provider": "copilot",
     "mode": "subtle",
     "copilot": {
       "proxy": null,
@@ -191,13 +198,9 @@
     },
     "enabled_in_text_threads": false
   },
-
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "theme": "Rosé Pine",
+  "theme": "Monokai Vibrant Amped",
   "inline_code_actions": false,
   "autosave": {
     "after_delay": {

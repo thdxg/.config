@@ -4,7 +4,7 @@ theme = "rose-pine"
 mouse = true
 end-of-line-diagnostics = "hint"
 clipboard-provider = "pasteboard"
-text-width = 80
+# text-width = 80
 
 [editor.statusline]
 left = ["mode", "file-absolute-path", "spinner"]
@@ -19,9 +19,9 @@ hidden = false
 git-ignore = true
 ignore = true
 
-[editor.soft-wrap]
-enable = true
-wrap-at-text-width = true
+# [editor.soft-wrap]
+# enable = true
+# wrap-at-text-width = true
 
 [editor.indent-guides]
 render = true
@@ -38,6 +38,10 @@ after-delay.timeout = 500
 snippets = true
 
 [keys.normal]
+pageup = ":page-up-smooth"
+pagedown = ":page-down-smooth"
+"C-d" = ":half-page-down-smooth"
+"C-u" = ":half-page-up-smooth"
 "C-j" = ["scroll_down"]
 "C-k" = ["scroll_up"]
 "C-r" = [":config-reload", ":reload-all", ":lsp-restart"]
